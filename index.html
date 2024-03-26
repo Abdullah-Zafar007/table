@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: none;
+    }
+
+    th {
+      background-color: Gainsboro;
+    }
+
+    tr:hover {
+      background-color: LightGray;
+    }
+
+    .edit-btn, .delete-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 3px 8px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .delete-btn {
+      background-color: #e74c3c;
+    }
+
+    .edit-icon::before {
+      content: "✎ ";
+    }
+
+    .delete-icon::before {
+      content: "🗑 ";
+    }
+
+    .status-btn {
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100px;
+    }
+
+    .not-completed { background-color: Tomato; color: White; }
+    .completed { background-color: SeaGreen; color: White; }
+    .processing { background-color: DodgerBlue; color: White; }
+
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Invoice</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Amount</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Ali</td>
+        <td>2024-03-11</td>
+        <td><button class="status-btn not-completed">Not Completed</button></td>
+        <td>100.00</td>
+        <td>
+          <button class="edit-btn"><span class="edit-icon"></span> Edit</button>
+          <button class="delete-btn"><span class="delete-icon"></span> Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Hassan</td>
+        <td>2024-03-12</td>
+        <td><button class="status-btn completed">Completed</button></td>
+        <td>75.50</td>
+        <td>
+          <button class="edit-btn"><span class="edit-icon"></span> Edit</button>
+          <button class="delete-btn"><span class="delete-icon"></span> Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Hussain</td>
+        <td>2024-03-13</td>
+        <td><button class="status-btn processing">Processing</button></td>
+        <td>50.25</td>
+        <td>
+          <button class="edit-btn"><span class="edit-icon"></span> Edit</button>
+          <button class="delete-btn"><span class="delete-icon"></span> Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Sajjad</td>
+        <td>2024-03-14</td>
+        <td><button class="status-btn completed">Completed</button></td>
+        <td>120.75</td>
+        <td>
+          <button class="edit-btn"><span class="edit-icon"></span> Edit</button>
+          <button class="delete-btn"><span class="delete-icon"></span> Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Bakir</td>
+        <td>2024-03-15</td>
+        <td><button class="status-btn not-completed">Not Completed</button></td>
+        <td>90.20</td>
+        <td>
+          <button class="edit-btn"><span class="edit-icon"></span> Edit</button>
+          <button class="delete-btn"><span class="delete-icon"></span> Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
